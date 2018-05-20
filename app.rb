@@ -1,4 +1,5 @@
 require_relative 'config/environment'
+require 'pry'
 
 class Application < Sinatra::Base
   
@@ -8,6 +9,8 @@ class Application < Sinatra::Base
   end
   
   post '/' do
+    @game = TicTacToe.new
+    @game.turns(params)
     erb :index
   end
   

@@ -1,3 +1,5 @@
+require 'pry'
+
 class TicTacToe
   def initialize
     @board = Array.new(9, " ")
@@ -95,7 +97,7 @@ class TicTacToe
   end
   
   def move(index, player_token)
-    @board[index] = player_token
+    @board[index.to_i] = player_token
   end
   
   def valid_move?(index)
