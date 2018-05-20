@@ -10,19 +10,64 @@
     <form action="/" method="POST">
       <table>
         <tr>
-          <td><input type="text" name="0" value="<%= @game.board[0] %>"/></td>
-          <td><input type="text" name="1" value="<%= @game.board[1] %>"/></td>
-          <td><input type="text" name="2" value="<%= @game.board[2] %>"/></td>
+          <td><%if @game.board[0] == "X" || @game.board[0] == "O"%>
+                  <input type="text" name="0" value="<%=@game.board[0]%>" readonly/>
+              <%else%>
+                  <input type="text" name="0" value="<%=@game.board[0]%>"/>
+              <%end%>
+          </td>
+          <td><%if @game.board[1] == "X" || @game.board[1] == "O"%>
+                  <input type="text" name="1" value="<%=@game.board[1]%>" readonly/>
+              <%else%>
+                  <input type="text" name="1" value="<%=@game.board[1]%>"/>
+              <%end%>
+          </td>
+          <td><%if @game.board[2] == "X" || @game.board[2] == "O"%>
+                  <input type="text" name="2" value="<%=@game.board[2]%>" readonly/>
+              <%else%>
+                  <input type="text" name="2" value="<%=@game.board[2]%>"/>
+              <%end%>
+          </td>
         </tr>
         <tr>
-          <td><input type="text" name="3" value="<%= @game.board[3] %>"/></td>
-          <td><input type="text" name="4" value="<%= @game.board[4] %>" /></td>
-          <td><input type="text" name="5" value="<%= @game.board[5] %>"/></td>
+          <td><%if @game.board[3] == "X" || @game.board[3] == "O"%>
+                  <input type="text" name="3" value="<%=@game.board[3]%>" readonly/>
+              <%else%>
+                  <input type="text" name="3" value="<%=@game.board[3]%>"/>
+              <%end%>
+          </td>
+          <td><%if @game.board[4] == "X" || @game.board[4] == "O"%>
+                  <input type="text" name="4" value="<%=@game.board[4]%>" readonly/>
+              <%else%>
+                  <input type="text" name="4" value="<%=@game.board[4]%>"/>
+              <%end%>
+          </td>
+          <td><%if @game.board[5] == "X" || @game.board[5] == "O"%>
+                  <input type="text" name="5" value="<%=@game.board[5]%>" readonly/>
+              <%else%>
+                  <input type="text" name="5" value="<%=@game.board[5]%>"/>
+              <%end%>
+          </td>
         </tr>
         <tr>
-          <td><input type="text" name="6" value="<%= @game.board[6] %>"/></td>
-          <td><input type="text" name="7" value="<%= @game.board[7] %>"/></td>
-          <td><input type="text" name="8" value="<%= @game.board[8] %>"/></td>
+          <td><%if @game.board[6] == "X" || @game.board[6] == "O"%>
+                  <input type="text" name="6" value="<%=@game.board[6]%>" readonly/>
+              <%else%>
+                  <input type="text" name="6" value="<%=@game.board[6]%>"/>
+              <%end%>
+          </td>
+          <td><%if @game.board[7] == "X" || @game.board[7] == "O"%>
+                  <input type="text" name="7" value="<%=@game.board[7]%>" readonly/>
+              <%else%>
+                  <input type="text" name="7" value="<%=@game.board[7]%>"/>
+              <%end%>
+          </td>
+          <td><%if @game.board[8] == "X" || @game.board[8] == "O"%>
+                  <input type="text" name="8" value="<%=@game.board[8]%>" readonly/>
+              <%else%>
+                  <input type="text" name="8" value="<%=@game.board[8]%>"/>
+              <%end%>
+          </td>
         </tr>
       </table>
       <input type="submit" value="Submit Move" id="submit"/>
